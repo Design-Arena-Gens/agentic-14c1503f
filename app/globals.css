@@ -1,0 +1,128 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #101522 0%, #05070d 65%, #020205 100%);
+  color: #f4f4f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(940px, 100%);
+  display: grid;
+  gap: 2.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.hero__eyebrow {
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: rgba(236, 242, 255, 0.6);
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin: 0;
+}
+
+.hero__subtitle {
+  margin: 0 auto;
+  max-width: 42rem;
+  color: rgba(236, 242, 255, 0.78);
+  line-height: 1.6;
+}
+
+.fusion {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.fusion__canvas-wrapper {
+  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.12), rgba(15, 18, 30, 0.6));
+  padding: 1.5rem;
+  border-radius: 24px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+}
+
+.fusion__canvas {
+  max-width: min(720px, 80vw);
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.fusion__actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fusion__button {
+  padding: 0.9rem 2.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #5e72eb, #9b51e0 60%, #f2994a);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.fusion__button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.fusion__button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(94, 114, 235, 0.35);
+}
+
+.fusion__note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(236, 242, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .fusion__canvas-wrapper {
+    padding: 1rem;
+  }
+
+  .fusion__button {
+    width: 100%;
+  }
+}
